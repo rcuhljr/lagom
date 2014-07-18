@@ -1,8 +1,12 @@
 ---
 layout: post
-title: Another sample
-categories:
+title: Cook's Theorem and You
+categories: 
 - blog
+tags:
+- Theory Of Computation
+- Decidability
+- Garey and Johnson
 ---
 
 Tattooed roof party *vinyl* freegan single-origin coffee wayfarers tousled, umami yr 
