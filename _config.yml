@@ -2,6 +2,7 @@
 highlighter: rouge
 url: http://kessel:4000
 lsi: false
+markdown: kramdown
 exclude: [LICENSE, CNAME, README.md, .gitignore, Gemfile, Gemfile.lock]
 
 # Theme customization - please change from the defaults!
