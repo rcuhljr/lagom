@@ -1,6 +1,6 @@
 # General Jekyll Config
 highlighter: pygments
-url: http://example.com
+url: http://overseer:4000
 lsi: false
 exclude: [LICENSE, CNAME, README.md, .gitignore]
 
@@ -16,7 +16,7 @@ theme:
   # "Hi, I'm _______"
   name: Robert Uhl
   email: uhlrc@yahoo.com
-  tagline: "weak opinions, strongly held"
+  tagline: "yet another blog post"
 
   # Google Analytics key, leave blank to ignore
   google_analytics_key: 
