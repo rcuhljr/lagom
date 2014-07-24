@@ -1,6 +1,6 @@
 # General Jekyll Config
 highlighter: pygments
-url: http://overseer:4000
+url: rcuhljr.github.io
 lsi: false
 markdown: kramdown
 exclude: [LICENSE, CNAME, README.md, .gitignore]
