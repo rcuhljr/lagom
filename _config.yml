@@ -2,6 +2,7 @@
 highlighter: pygments
 url: http://overseer:4000
 lsi: false
+markdown: kramdown
 exclude: [LICENSE, CNAME, README.md, .gitignore]
 
 # Theme customization - please change from the defaults!
