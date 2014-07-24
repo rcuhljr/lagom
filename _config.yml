@@ -1,6 +1,6 @@
 # General Jekyll Config
 highlighter: pygments
-url: rcuhljr.github.io
+url: http://rcuhljr.github.io
 lsi: false
 markdown: kramdown
 exclude: [LICENSE, CNAME, README.md, .gitignore]
