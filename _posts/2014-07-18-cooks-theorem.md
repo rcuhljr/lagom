@@ -48,7 +48,7 @@ We can see that the set of characters used by our encoding scheme looks like thi
 
 Now where do Languages come in? We can see that our infinite set of strings splits into three groups. Strings that aren't valid encodings of our problem (#3). Strings that are valid encodings of an instance of our problem whose answer is No (#2). This leaves our Language (for this e and P); the strings that are valid encodings whose answer is Yes (#1).
 
-So now that we know what know what a Language for our encoding is, what does that get us? We can show that anything that holds for L(e,P) holds for any other L(e',P) as long as both encodings meet our reasonable requirement. This lets us largely ignore encoding as our proofs become encoding independent. Secondly Turing machines that recognize languages provide us with a formal way to classify our problems by going from the Original Problem -> The Language comprised of 'Yes' encodings of our problem -> The run time of the Turing Machine that recognizes the language.
+So now that we know what know what a Language for our encoding is, what does that get us? We can show that anything that holds for L(e,P) holds for any other L(e',P) as long as both encodings meet our reasonable requirement. This lets us our proofs become encoding independent. Secondly Turing machines that recognize languages provide us with a formal way to classify our problems by going from the Original Problem -> The Language comprised of 'Yes' encodings of our problem -> The run time of the Turing Machine that recognizes the language.
 
 ## Turing Machines, P, and NP
 
