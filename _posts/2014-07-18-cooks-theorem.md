@@ -56,7 +56,9 @@ Some people may remember the standard [one tape deterministic turing machine](ht
 
 We say that a Language (and thus a problem) belongs to class P if there is a polynomial run time DTM program which recognizes the Language. Most of us will just boil this down in our minds to 'a computer algorithm can solve this problem in polynomial time' which is sufficient for our purposes, but we'll want to use the slightly deeper understanding we had to define the class NP. We've already looked at problems that can be solved in polynomial time, but now lets look at problems where we can verify a possible solution in polynomial time (NP). We can understand that some problems which don't appear to be easily solvable (P) are at least easily verifiable (NP). [The Traveling Salesman Problem](http://en.wikipedia.org/wiki/Travelling_salesman_problem) (TSP) is an optimization problem, which as we discussed earlier means it has a decision problem version we can examine more closely. 
 
-    For a set of cities with known distances between every pair of cities, is there a tour that visits all cities and ends back at the start point with a total distance <= B
+    For a set of cities with known distances between every pair of cities,
+    is there a tour that visits all cities and ends back at the start point
+    with a total distance <= B
 
 You can take my word that there is no easy polynomial solution to this decision problem, however it should once again be easy to see how verification of a potential answer could be done in polynomial time. The tour needs to start from the start point, visit each node at least once, and end at the start point. If that criteria is met and the total distance traveled is <= B then the answer is yes.
 
