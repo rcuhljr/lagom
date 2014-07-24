@@ -26,7 +26,7 @@ The core of this book is is about the class of the hardest problems in NP space 
 
 Much like you might expect, decision problems are questions where the answer is simply yes or no. For example, can I get from Node A to Node B in a graph in fewer than 3 steps? Decision problems are useful to look at for two reasons, firstly they are directly tied to optimization problems in a natural manner. It's easy to see how the optimization problem of finding the fewest steps from Node A to Node B must be at least as hard as the decision problem above. Secondly decision problems have a natural formal counterpart called a Language. Let's look at a simpler decision problem.
 
-`For a positive integer N: Is there a positive integer m such that N = 4m`
+     For a positive integer N: Is there a positive integer m such that N = 4m
 
  We can understand that this question is simply asking if N is evenly divisible by 4. In order to have a Language we need an alphabet, which means we need a uniform way to encode our given problem. there are plenty of ways we could encode this problem, think about making a file format for storing questions of this form. For an example I'm going to make a slightly more complicated format of [Length of N in binary encoding]-[N  in binary] instead of the just recording the number in binary to make it easier to illustrate some later points.
 
@@ -56,7 +56,7 @@ Some people may remember the standard [one tape deterministic turing machine](ht
 
 We say that a Language (and thus a problem) belongs to class P if there is a polynomial run time DTM program which recognizes the Language. Most of us will just boil this down in our minds to 'a computer algorithm can solve this problem in polynomial time' which is sufficient for our purposes, but we'll want to use the slightly deeper understanding we had to define the class NP. We've already looked at problems that can be solved in polynomial time, but now lets look at problems where we can verify a possible solution in polynomial time (NP). We can understand that some problems which don't appear to be easily solvable (P) are at least easily verifiable (NP). [The Traveling Salesman Problem](http://en.wikipedia.org/wiki/Travelling_salesman_problem) (TSP) is an optimization problem, which as we discussed earlier means it has a decision problem version we can examine more closely. 
 
-`For a set of cities with known distances between every pair of cities, is there a tour that visits all cities and ends back at the start point with a total distance <= B`
+    For a set of cities with known distances between every pair of cities, is there a tour that visits all cities and ends back at the start point with a total distance <= B
 
 You can take my word that there is no easy polynomial solution to this decision problem, however it should once again be easy to see how verification of a potential answer could be done in polynomial time. The tour needs to start from the start point, visit each node at least once, and end at the start point. If that criteria is met and the total distance traveled is <= B then the answer is yes.
 
