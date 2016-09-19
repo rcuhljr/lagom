@@ -2,25 +2,4 @@
 highlighter: pygments
 url: http://rcuhljr.github.io
 lsi: false
-markdown: kramdown
 exclude: [LICENSE, CNAME, README.md, .gitignore, Gemfile, Gemfile.lock]
-
-# Theme customization - please change from the defaults!
-theme:
-  # Color for top bar, links, etc
-  highlight_color: '#3498db'
-
-  # Profile links on the left sidebar, leave blank to ignore
-  social:
-    github: rcuhljr
-
-  # "Hi, I'm _______"
-  name: Robert Uhl
-  email: uhlrc@yahoo.com
-  tagline: "yet another blog post"
-
-  # Google Analytics key, leave blank to ignore
-  google_analytics_key: 
-
-  # Toggle "Postings are my own" disclaimer in footer
-  show_disclaimer: true
