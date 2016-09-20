@@ -49,6 +49,7 @@ All of our user visible strings live in resource bundles which are sourced to ou
 * Never translated
 * Attempted translation but didn't exist
 * Translated succesfully
+* Sent through translations more than once
 
 ### Inside a Spring MessageSource
 {% highlight java %}
@@ -141,7 +142,7 @@ public class PermissionSteps {
 }
 {% endhighlight %}
 
-These steps were designed to minify the number of times we refresh the browser (which is slowwww). By persisting the previous and current permissions we can wait until all permissions are set for the test file, and then only actually update them if any permissions have changed between the permission sets. This means we only refresh the browser once when entering a file and only if that file changes the permissions from the previous test run. Hopefully these additions will allow more flexible tests and make it easier to assert conditions outside of the single path we've been able to test up until now.
+These steps were designed to minimize the number of times we refresh the browser (which is slowwww). By persisting the previous and current permissions we can wait until all permissions are set for the test file, and then only actually update them if any permissions have changed between the permission sets. This means we only refresh the browser once when entering a file and only if that file changes the permissions from the previous test run. Hopefully these additions will allow more flexible tests and make it easier to assert conditions outside of the single path we've been able to test up until now.
 
 
 Cookies can be an incredibly convenient tool for enabling rich debugging and testing in your web application, and can simplify some common problems you might run into.
