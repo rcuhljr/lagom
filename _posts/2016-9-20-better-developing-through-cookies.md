@@ -14,7 +14,7 @@ This post will look at three different ways my current project has leveraged coo
 
 ---
 
-##But why male models?
+## But why male models?
 
 So what are the advantages and disadvantages of using cookies as part of your development, debugging, and testing and how can you counteract the downsides?
 
@@ -22,7 +22,7 @@ On the plus side, they're easy to interact with both on the client and server si
 
 On the downside, obscurity is not security, anything you can control with a cookie setting you should expect your users to be able to control as well and it shouldn't compromise your site. A co-worker related a tale of a site that determined if you were an administrator by the _lack_ of a user cookie, don't be that site. These settings can be out of sight and out of mind, so make it easy to verify their current state and consider reasonable expirations on the cookies to prevent them from hanging around and causing unexpected confusion later. Be mindful that depending on your architecture and app behavior you may need to refresh the page you are on after updating the cookie for the changes to propagate. This warrants being mindful of in a testing context especially in Single Page Apps (SPAs) where refreshing may change your context or deep linking is problematic.
 
-###Checking a cookie in Java Spring
+### Checking a cookie in Java Spring
 
 {% highlight java %}
 public Boolean isSomeCookieSet() {
@@ -42,7 +42,7 @@ public Boolean isSomeCookieSet() {
 }
 {% endhighlight %}
 
-##Test Language
+## Test Language
 
 All of our user visible strings live in resource bundles which are sourced to our translators (Expect a blog post on the tooling we made to support this!). Or at least that's the goal, but there's been cases of strings slipping through untranslated and it's an inconvenient game of whack-a-mole verifying strings in the site against the backing resource files to make sure it's present. Even switching your browser language won't always help since some very short strings or single words often translate to the same word in many languages. This lead to the creation of our first helper, a button in our site's debug bookmarklet that would toggle on a test language mode. Any string that was going through our global message source would be modified based on success or failure. This makes it instantly visually obvious if the string was...
 
@@ -50,7 +50,7 @@ All of our user visible strings live in resource bundles which are sourced to ou
 * Attempted translation but didn't exist
 * Translated succesfully
 
-###Inside a Spring MessageSource
+### Inside a Spring MessageSource
 {% highlight java %}
 public String getSomeTranslation(code)
     ...
@@ -74,12 +74,12 @@ private String processString(String originalCode, String translated) {
 
 This feature has been widely lauded and makes it super easy on anyone doing testing to verify the translation state of the application in any environment.
 
-##Logging lower services
+## Logging lower services
 
 We don't actually do much work with the data in web service. Almost all of our data is sourced from a centralized API that serves many other user applications the client develops in parallel with ours. This makes tracing down data discrepancies a long and sometimes painful process. It's further complicated by the default logging through the data pipeline not always being the greatest. Lately however much of the pipeline has been retrofitted with checkpoint logging that records the entire life cycle of a request as long as a specific header is sent along with the initial request. We now needed to find the best way to know when to include this logging header from requests sent out of Spring application. By combining a Spring interceptor on outbound requests and our cookie checking logic it became simple to just navigate to the action you wish to log, turn on logging, perform the action, and disable the logging cookie.
 
 
-##Permissions in testing
+## Permissions in testing
 
 Our site has a local deployment option we call a Stub layer. Using Spring's dependency injection our entire data layer is swapped out with an in memory layer that provides fake data and basic persistence of changes. This is the data that our acceptance tests operate on in the various stages of our pipeline. This testing and stub layer also bypasses the authorization logging in behavior which is outside of our control in the local environment. The downside to this set up is that all of our data is basically static unless we can edit it through the site, and we can't test site behavior for various classes of users or users without certain permissions. This is a fairly serious drawback as you might guess, meaning that many things can only be tested manually and as our site begins to use more permissioning the problem was only going to grow.
 
@@ -100,7 +100,7 @@ Luckily cookies came to the rescue! Since our stub layer only ever exists in the
 The background field is used at the top of our feature and runs before every scenario in the file, except we don't want to set permissions and refresh the browser before every single scenario, just doing it once seems far more reasonable. Let's look at the steps file that interprets the permissions.
 
 
-###PermissionSteps.java
+### PermissionSteps.java
 
 {% highlight java %}
 public class PermissionSteps {
