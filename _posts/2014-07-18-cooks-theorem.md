@@ -7,7 +7,6 @@ tags:
 - Theory Of Computation
 - Decidability
 - Garey and Johnson
-requires_js_math: false
 ---
 
 

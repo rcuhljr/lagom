@@ -8,7 +8,6 @@ tags:
 - Open Source
 - Dependency Resolution
 - Lich
-requires_js_math: false
 ---
 
 I've been working for almost a year on a set of side projects built around a [MUD](https://en.wikipedia.org/wiki/MUD) called [DragonRealms](http://www.play.net/dr/)(DR) and it's given me a chance to solve a lot of interesting problems, both technical and soft in nature. I want to use my blog as a chance to solidify and share some of my lessons learned in both areas. [Robert Herbig](https://www.rpherbig.com/about/) has been working on this project with me and you should probably read his [introductory post](http://www.rpherbig.com/2016/09/30/a-lot-can-happen-in-a-year.html) for a background on what this side project entails.

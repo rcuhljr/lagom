@@ -7,7 +7,6 @@ tags:
 - Web Development
 - Cookies
 - Testing
-requires_js_math: false
 ---
 
 This post will look at three different ways my current project has leveraged cookies to aid in development and testing of our web application. Much credit goes to my co-worker [Sasha](https://arktronic.com) for the original impetus and implementation of one of these facets.

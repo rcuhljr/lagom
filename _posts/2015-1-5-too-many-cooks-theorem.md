@@ -7,7 +7,6 @@ tags:
 - Theory Of Computation
 - Decidability
 - Garey and Johnson
-requires_js_math: false
 ---
 
 Now that we've laid the groundwork for Cook's Theorem it's finally time to step through it. This post will follow the formalizations of the proof, while at the same time implementing the concepts in actual programs which we can run and verify our results at the conclusion of this piece. All of the code used here can be found at [this repository.](https://github.com/rcuhljr/cooks-theorem)
