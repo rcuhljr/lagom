@@ -11,15 +11,6 @@ layout: default
 
 <h1 class="title">{{ page.title }}</h1>
 
-{% if page.requires_js_math %}
-<script src="/assets/scripts/jsMath/easy/load.js"></script>
-<NOSCRIPT>
-  <DIV STYLE="color:#CC0000; text-align:center">
-    JavaScript is used to process the mathematics on this page. If your browser supports JavaScript, be sure it is enabled.
-  </DIV>
-</NOSCRIPT>
-{% endif %}
-
 <div id="post">
   {{ content }}
 </div>
