@@ -30,7 +30,7 @@ Much like you might expect, decision problems are questions where the answer is 
 
  We can understand that this question is simply asking if N is evenly divisible by 4. In order to have a Language we need an alphabet, which means we need a uniform way to encode our given problem. there are plenty of ways we could encode this problem, think about making a file format for storing questions of this form. For an example I'm going to make a slightly more complicated format of [Length of N in binary encoding]-[N  in binary] instead of the just recording the number in binary to make it easier to illustrate some later points.
 
- #1
+## Sample #1
 
 4-1100
 
@@ -38,11 +38,11 @@ This is one reasonable encoding (e) for our problem (P). An encoding is reasonab
 
 We can see that the set of characters used by our encoding scheme looks like this {0-9,-}. Now let us look at all possible strings composed only of these characters, so in addition to our encoding above we also have strings like this.
 
- #2 
+## Sample #2 
 
 4-1101
 
- #3 
+## Sample #3 
 
 12-15-9
 

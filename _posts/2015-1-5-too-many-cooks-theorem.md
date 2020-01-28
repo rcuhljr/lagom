@@ -28,8 +28,7 @@ So now we have our goal laid out before us, we want to show that we can generica
 
 To help drive this understanding I built a series of programs representing both a DTM and the transformation from DTM into satisfiability. 
 
-###dtm.rb
-
+### dtm.rb
 {% highlight ruby %}
   def initialize(config = {})
     @symbols = config[:symbols] || ['b', '0', '1']
